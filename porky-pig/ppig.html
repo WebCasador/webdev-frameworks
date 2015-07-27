@@ -19,7 +19,9 @@
 
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	
+
 	<script type="text/javascript" src="assets/js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.scrollTo.js"></script>
 
 	<script type="text/javascript" src="assets/js/script.js"></script>
 
@@ -36,20 +38,19 @@
 				<a href="" class="cta">Start your project with Porky Pig</a>
 			</div>		
 		</header>
-		<nav>
+		<nav id="navbar">
 			<ul>
-				<li class="work"><a href="#work">work</a></li>
-				<li class="news"><a href="#news">news</a></li>
-				<li class="blog"><a href="#blog">blog</a></li>
-				<li class="looneyTunes"><a href="#header"><div class="circle"></div></a></li>
-				<li class="#about"><a href="">about</a></li>
-				<li class="#network"><a href="">network</a></li>
-				<li class="#contact"><a href="">contact</a></li>
+				<li class="work work-button"><a href="#work">work</a></li>
+				<li class="news news-button"><a href="#news">news</a></li>
+				<li class="blog blog-button"><a href="#blog">blog</a></li>
+				<li class="looneyTunes looneyTunes-button"><a href="#header"><div class="lt-logo">
+				</div></a></li>
+				<li class="about about-button"><a href="#about">about</a></li>
+				<li class="network network-button"><a href="#network">network</a></li>
+				<li class="contact contact-button"><a href="#contact">contact</a></li>
 			</ul>
 			
-			<div class =lt-logo>
-				<!-- <img src="assets/img/looneyTunes-logo.png"> -->
-			</div>
+			
 		</nav>
 		
 
@@ -112,7 +113,7 @@
 							</figure>
 						</a>
 					<p></p>
-					<a href="#" class="read-more">Read more<span> &#8594</span></a>
+					<a href="#" class="read-more">Read more<span>&#8594</span></a>
 				</div>
 				<div class="moreNews">
 					<div class="webby">
@@ -163,16 +164,16 @@
 				<img class="apple" src="assets/img/apple.png" alt="apple on teacher's desk">
 
 				<div class="feature-blog">
-					<a href="#">Those who teach, learn.</a>
+					<h3>Those who teach, learn.</h3>
 					<p>At Porky Pig, we take pride in our work teaching others and sharing what we’ve learned. Whether by speaking at a conference, leading a class, or writing on this very blog, we’ve taught or shared our knowledge on best practices for web design and devlopment, user experience design, business advice, and even the occasional informal primer on animated GIFs. </p>
 	
 					<p>When someone at Porky Pig tells me that they’re teaching a class for a website or a local university, or a workshop at a conference, my first response to them is one of encouragement.</p>
 					
 					<p>Then, I say: <span>The best way to get better at what you do is to teach others how to do it, too.</span></p>
-	
+					<a href="#" class="cta">Read Full Article</a>
 					
 				</div>
-				<a href="#" class="cta">Read Full Article</a>
+				
 				<div class="blog-articles">
 					<h4>Recent Articles</h4>
 					<div class="columns col-1 writing">
