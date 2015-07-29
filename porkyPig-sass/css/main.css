@@ -44,11 +44,12 @@ figure.zappos, figure.delval, figure.monotype {
 section {
   clear: both;
   width: 100%;
+  padding-top: 15px;
   background-color: #fff; }
 
 #wrapper {
   width: 100%;
-  padding: 0 15.375%; }
+  padding: 0 12.375%; }
 
 a {
   color: #202020;
@@ -95,6 +96,46 @@ p {
   font-family: Open Sans, sans-serif;
   font-size: .75em;
   line-height: 200%; }
+
+.cta {
+  display: block;
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  position: relative;
+  padding: .8%;
+  background-color: #ffcd0f;
+  background-size: contain;
+  background-repeat: no-repeat; }
+  .cta .cta {
+    display: inline-block;
+    color: #202020;
+    background-color: #ffcd0f;
+    position: relative;
+    text-align: center;
+    padding: 11px 5px;
+    font-size: 18px;
+    line-height: 18px; }
+  .cta .cta:before {
+    left: -31px;
+    border: 20px solid #ffcd0f;
+    border-left-color: transparent; }
+  .cta .cta:before,
+  .cta .cta:after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 0;
+    z-index: -1; }
+  .cta .cta:after {
+    right: -20px;
+    border-left-width: 20px;
+    border-right-color: transparent;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #ffcd0f; }
 
 .headline {
   width: 57.520446096654%;
@@ -167,12 +208,13 @@ nav {
   display: inline-block;
   width: 100%;
   height: 20px;
-  padding: 0 10% 0 17%;
+  margin-bottom: 20px;
+  padding: 0 22.5%;
   background-color: #202020; }
   nav ul {
     display: inline-block;
     position: absolute;
-    margin: 0 50px;
+    margin: 0 20px;
     padding: 0; }
   nav li {
     display: inline-block;
@@ -195,11 +237,12 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  padding: 0 22.5%;
   z-index: 2; }
 
 .looneyTunes {
   height: 52px;
-  width: 5px;
+  width: 55px;
   position: relative;
   background-color: #fff;
   border-width: 10px;
@@ -208,7 +251,7 @@ nav {
 
 .lt-logo {
   top: 2px;
-  right: -10px;
+  right: -15px;
   width: 63px;
   height: 55px;
   position: absolute;
@@ -351,7 +394,7 @@ figure {
 #blog .apple {
   width: 38.558909444985%;
   float: left;
-  margin: 0 7.20545% 150px; }
+  margin: 0 7.20545% 90px; }
 
 #blog .cta {
   margin: 50px 20px;
@@ -465,7 +508,7 @@ footer {
       margin-left: 13%; }
     footer .black-bar p {
       display: inline-block;
-      width: 10%;
+      width: 15%;
       margin-left: 49%;
       text-align: right; }
     footer .black-bar img {

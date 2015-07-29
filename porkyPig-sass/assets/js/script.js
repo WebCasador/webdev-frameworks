@@ -19,7 +19,7 @@ $(document).on("ready", function(e) {
 
 	// $(".work-button").scrollTo('#work', 2000, {offset: function() { return {top:-300}; }});
 	$(".work-button").on("click", function(){
-		$.scrollTo( $("#work"), 1000);
+		$.scrollTo( $("#work"), 1000).offset(500);
 	});
 	
 	$(".news-button").on("click", function(){
