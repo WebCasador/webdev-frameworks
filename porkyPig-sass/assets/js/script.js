@@ -17,29 +17,29 @@ $(document).on("ready", function(e) {
 	fixedNavigation();
 	$(window).scroll(fixedNavigation);
 
-	// $(".work-button").scrollTo('#work', 500, {offset: function() { return {top:-300}; }});
+	// $(".work-button").scrollTo('#work', 2000, {offset: function() { return {top:-300}; }});
 	$(".work-button").on("click", function(){
-		$.scrollTo( $("#work"), 500);
+		$.scrollTo( $("#work"), 1000);
 	});
 	
 	$(".news-button").on("click", function(){
-		$.scrollTo( $("#news"), 500);
+		$.scrollTo( $("#news"), 1000);
 
 	});$(".blog-button").on("click", function(){
-		$.scrollTo( $("#blog"), 500);
+		$.scrollTo( $("#blog"), 1000);
 
 	});$(".about-button").on("click", function(){
-		$.scrollTo( $("#about"), 500);
+		$.scrollTo( $("#about"), 1000);
 
 	});$(".network-button").on("click", function(){
-		$.scrollTo( $("#network"), 500);
+		$.scrollTo( $("#network"), 1000);
 
 	});$(".contact-button").on("click", function(){
-		$.scrollTo( $("#contact"), 500);
+		$.scrollTo( $("#contact"), 1000);
 	});
 
 	$(".looneyTunes-button").on("click", function(){
-		$.scrollTo( $("#header"), 500);
+		$.scrollTo( $("#header"), 1000);
 	});
 
 

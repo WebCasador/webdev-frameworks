@@ -2,22 +2,6 @@
 @import "_utils";
 @import "_cta";
 
-//======================================
-//          	BACKGROUND IMAGES
-// =====================================
-
-$url_0: url(../assets/img/looneyTunes-logo.png);
-$url_1: url(../assets/img/zappos-off.png);
-$url_2: url(../assets/img/zappos.png);
-$url_3: url(../assets/img/delval-off.png);
-$url_4: url(../assets/img/delval.png);
-$url_5: url(../assets/img/monotype-off.png);
-$url_6: url(../assets/img/monotype.png);
-$url_7: url(../assets/img/bookApart.png);
-$url_8: url(../assets/img/eventApart.png);
-$url_9: url(../assets/img/listApart.png);
-
-
 
 * {
 	box-sizing: border-box;
@@ -87,7 +71,9 @@ p {
 	font-size: .75em;
 	line-height: 200%;
 }
+.cta{ @include: .cta;}
 .cta {
+	@include: .cta;
 	display: inline-block;
 	position: relative;
 	padding: .8%;
@@ -95,6 +81,7 @@ p {
 	background-size: contain;
 	background-repeat: no-repeat;
 }
+
 .headline {
 	width: 57.520446096654%;
 	margin: 26px auto;
@@ -218,7 +205,7 @@ nav {
 
 .looneyTunes {
 	height: 52px;
-	width: 5px;
+	width: 55px;
 	position: relative;
 	background-color: $color_white;
 	border-width: 10px;
@@ -227,7 +214,7 @@ nav {
 }
 .lt-logo {
 	top: 2px;
-	right: -10px;
+	right: -15px;
 	width: 63px;
 	height: 55px;
 	position: absolute;
