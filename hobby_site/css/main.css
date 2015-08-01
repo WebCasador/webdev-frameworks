@@ -1,0 +1,82 @@
+/* primary CTA */
+* {
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  margin: 0;
+  background-color: #004a59; }
+
+header {
+  width: 100%;
+  height: 100px;
+  padding: 5px 20px;
+  background-color: #202020;
+  position: fixed;
+  border-bottom: 1px solid #3cccf2;
+  z-index: 1;
+  opacity: .9; }
+  header #logo {
+    width: auto;
+    height: 75px;
+    margin: 10px;
+    position: fixed;
+    z-index: 1; }
+  header h1, header h3 {
+    color: #fff;
+    margin: 10px 0 10px 100px;
+    display: inline-block;
+    float: right; }
+
+#tattoo_works {
+  padding-top: 120px; }
+
+section {
+  width: 100%; }
+  section .artworks {
+    height: auto; }
+
+.artworks {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  margin: 2%;
+  float: left; }
+  .artworks img {
+    width: 100%;
+    height: 320px; }
+  .artworks figcaption {
+    width: 100%;
+    display: absolute;
+    background-color: #000;
+    color: #fff;
+    margin: -70px 0 25px 0;
+    padding: 15px;
+    opacity: .7;
+    font-size: 12px;
+    bottom: -50px;
+    z-index: 2; }
+
+@media only screen and (min-width: 480px) {
+  .artworks {
+    float: left;
+    width: 45.61403508772%;
+    height: 320px;
+    margin: 0 2%; } }
+
+@media only screen and (min-width: 1000px) {
+  .artworks {
+    float: left;
+    width: 31.228070175439%;
+    margin: 0 1%; }
+  .cutout img {
+    width: 100%; }
+  #firebreather {
+    width: 64.044140350878%; } }
+
+@media only screen and (min-width: 1328px) {
+  .artworks {
+    float: left;
+    width: 23.414711477489%; }
+  #firebreather {
+    width: 23.414711477489%; } }
