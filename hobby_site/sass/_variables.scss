@@ -2,9 +2,12 @@
 //           	FONTS
 // =====================================
 
-$mainFont: Molengo;
-$defaultFont: sans-serif;
-$secondaryFont: Open Sans;
+// Rob: I'd like to see if you can help me organize
+// font stacks on scss.  It appears that I may need another
+// functions.js file for an if statement, if Im reading it correctly.
+// There are a few other steps that have me second-guessing myself.
+// I just know that I want to DRY up my fonts more so that I can change
+// everything from one location:: HERE. 
 
 //======================================
 //          	COLORS
@@ -16,3 +19,16 @@ $near-black: #202020;
 $dark-gray: #646464;
 $teal: #004a59;
 
+
+//======================================
+//          	BREAKPOINTS
+// =====================================
+
+$breakpoint-mobile_small: 0px;
+$breakpoint-mobile_portrait: 440px;
+$breakpoint-mobile_landscape: 670px;
+$breakpoint-tablet_portrait: 850px;
+$breakpoint-tablet_landscape: 960px;
+$breakpoint-laptop_small: 1024px;
+$breakpoint-laptop: 1280px;
+$breakpoint-desktop: 1600px;

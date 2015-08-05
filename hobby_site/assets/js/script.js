@@ -1,50 +1,75 @@
-console.log("ready2go!")
+console.log("ready2!")
+window.onload = function() {
 
-$(document).on("ready", function(e) {
+	var $image = document.querySelectorAll(".artworks img");
+	console.log($image);
 
-	// var fixedNavBar = $('#navbar').offset().top;
+	for (var i = 0; i < $image.length; i++) {
+		$image[i].onclick = makeLightbox;
+	};
+}
+// ///////////////////////////////////////////////////////////
+	var makeLightbox = function() {
+		console.log("artwork was clicked.")
+		// create overlay
+		var $overlay = document.createElement("div");
 
-	// var fixedNavigation = function(){
-	// 	var scrollTop = $(window).scrollTop();
-		      
-	// 	if (scrollTop > fixedNavBar) { 
-	// 	    $('#navbar').addClass('fixed');
-	// 	} else {
-	// 	    $('#navbar').removeClass('fixed'); 
-	// 	}
-	// };
-	 
-	// fixedNavigation();
-	// $(window).scroll(fixedNavigation);
+		$overlay.setAttribute("id","overlay")
+		$overlay.style.zIndex 				=1000;
+		$overlay.style.position 			= "fixed";
+		$overlay.style.top  				=0;
+		$overlay.style.left					=0;
+		$overlay.style.width				="100%";
+		$overlay.style.height				="100%"	;
+		$overlay.style.backgroundColor		="black";
+		$overlay.style.opacity				= 0.9;
 
-	// // $(".work-button").scrollTo('#work', 2000, {offset: function() { return {top:-300}; }});
-	// $(".work-button").on("click", function(){
-	// 	$.scrollTo( $("#work"), 1000).offset(500);
-	// });
-	
-	// $(".news-button").on("click", function(){
-	// 	$.scrollTo( $("#news"), 1000);
+		document.body.appendChild($overlay);
+		$overlay.onclick = endLightbox;
 
-	// });$(".blog-button").on("click", function(){
-	// 	$.scrollTo( $("#blog"), 1000);
+		// ///////////////////////////////////////////////////////
+		var $image = document.createElement("img");
 
-	// });$(".about-button").on("click", function(){
-	// 	$.scrollTo( $("#about"), 1000);
+		$image.setAttribute("src", this.getAttribute("src") );
+		$image.setAttribute("id","lightbox_image");
+		$image.style.zIndex 				=1001;
+		$image.style.position 				= "fixed";
+		$image.style.top  					="5%";
+		$image.style.left					="24%";
+		$image.style.width					="auto";
+		$image.style.height					="90%";
+		
+		document.body.appendChild($image);
+		$image.onclick = endLightbox;
+		// //////////////////////////////////////////////////
+		// var $closeButton = document.createElement("img");
 
-	// });$(".network-button").on("click", function(){
-	// 	$.scrollTo( $("#network"), 1000);
+	// 	$closeButton.setAttribute("src","http://www.clker.com/cliparts/t/f/J/i/7/C/amazon-style-close-button-hi.png");
+	// 	$closeButton.setAttribute("id","close_button");
 
-	// });$(".contact-button").on("click", function(){
-	// 	$.scrollTo( $("#contact"), 1000);
-	// });
+	// 	$closeButton.style.zIndex 					=1002;
+	// 	$closeButton.style.position 				= "fixed";
+	// 	$closeButton.style.top  					="15px";
+	// 	$closeButton.style.right					="40px";
+	// 	$closeButton.style.width					="20px";
+	// 	$closeButton.style.height					="20px";
 
-	// $(".looneyTunes-button").on("click", function(){
-	// 	$.scrollTo( $("#header"), 1000);
-	// });
+	// 	document.body.appendChild($closeButton);
+
+	// 	$closeButton.onclick = endLightbox;
+	}
+// ///////////////////////////////////////////////////////////
+
+	var endLightbox = function() {
+		console.log("destroy");
+		var $overlay = document.querySelector("#overlay");
+		var $image = document.querySelector("#lightbox_image");
+		// var $closeButton = document.querySelector("#close_button");
+
+		document.body.removeChild($overlay);
+		document.body.removeChild($image);
+		// document.body.removeChild($closeButton);
+
+	}
 
 
-	
-
-
-
-})

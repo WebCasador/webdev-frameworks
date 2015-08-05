@@ -1,16 +1,17 @@
 @import "_variables";
 @import "_artworks";
 
-
-
 * {
 	box-sizing: border-box;
 }
 
-html, body {
+html {
 	width: 100%;
 	margin: 0;
 	background-color: $teal;
+}
+body{ 
+	@extend html;
 }
 header {
 	width: 100%;
@@ -30,68 +31,118 @@ header {
 	}
 	h1, h3 { 
 		color: $white;
-		margin: 10px 0 10px 100px;
 		display: inline-block;
 		float: right;
-
 	}
-	
+	h3 {
+		font-family: 'Monsieur+La+Doulaise', cursive;
+		font-size: 40px;
+	}
 }
+//====================================
+//       HEADER BREAKPOINTS
+//====================================
+@media only screen and (min-width: $breakpoint-mobile_small) {
+	header {
+		#logo {
+			margin: 0;
+		}
+		h1, h3 {
+			margin: 10px 0 0 35px;
+		}
+	}
+}
+@media only screen and (min-width: $breakpoint-mobile_portrait) {
+	header {
+		h1, h3 {
+			margin: 10px 0 0 100px;
+		}
+	}
+}
+@media only screen and (min-width: $breakpoint-mobile_landscape) {
+	header {		
+		h1, h3 {
+			margin-top: 25px;
+		}
+	}
+}
+//====================================
+//       END HEADER BREAKPOINTS
+//====================================
+
 #tattoo_works {
 	padding-top: 120px;
 }
 section {
-	width: 100%;
+	@extend html;
 	.artworks {
 		height: auto;
 	}
 }
-
-
-
-
 .artworks {
 	@include artworks;
-	
+	figcaption {
+		transition: .3s;
+	}
 }
 
-@media only screen and (min-width: 480px) {
+.artworks:hover {
+	transition: .3s;
+	figcaption {
+		transform: scaleY(0);
+	}
+	img {
+		box-shadow: 4px 2px 7px #3cccf2;
+	}
+}
 
+//====================================
+//       .ARTWORKS- BREAKPOINTS
+//====================================
+@media only screen and (min-width: $breakpoint-mobile_small) {
+	.artworks img {
+		height: auto;
+	}
+}
+@media only screen and (min-width: $breakpoint-mobile_portrait) {
 	.artworks {
 		float: left;
 		width: 45.61403508772%;
 		height: 320px;
 		margin: 0 2%;
+
+		img { 
+			height: 320px;
+		}	
 	}
-
+	#firebreather {
+		width: 95.15%;
+	}
 }
-
-@media only screen and (min-width: 1000px) {
-
+@media only screen and (min-width: $breakpoint-mobile_landscape) {
 	.artworks {
-		float: left;
 		width: 31.228070175439%;
 		margin: 0 1%;
 	}
-
-	.cutout img {
-		width: 100%;
-	}
-
 	#firebreather {
-		width: 64.044140350878%;
+		width: 64.344140350878%;
 	}
 }
-
-@media only screen and (min-width: 1328px) {
-
+@media only screen and (min-width: $breakpoint-tablet_portrait) {
 	.artworks {
-		float: left;
 		width: 23.414711477489%;
+		margin: 0 .75%;
 	}
-
 	#firebreather {
-		width: 23.414711477489%;
+		width: 73.125%;
 	}
 }
+@media only screen and (min-width: $breakpoint-tablet_landscape) {
+	#firebreather {	
+		width: 48.125%;
+	}
+}
+//====================================
+//       END- .ARTWORKS BREAKPOINTS
+//====================================
 

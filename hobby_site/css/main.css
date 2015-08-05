@@ -2,7 +2,7 @@
 * {
   box-sizing: border-box; }
 
-html, body {
+html, body, section {
   width: 100%;
   margin: 0;
   background-color: #004a59; }
@@ -24,27 +24,46 @@ header {
     z-index: 1; }
   header h1, header h3 {
     color: #fff;
-    margin: 10px 0 10px 100px;
     display: inline-block;
     float: right; }
+  header h3 {
+    font-family: 'Monsieur+La+Doulaise', cursive;
+    font-size: 40px; }
+
+@media only screen and (min-width: 0px) {
+  header #logo {
+    margin: 0; }
+  header h1, header h3 {
+    margin: 10px 0 0 35px; } }
+
+@media only screen and (min-width: 440px) {
+  header h1, header h3 {
+    margin: 10px 0 0 100px; } }
+
+@media only screen and (min-width: 670px) {
+  header h1, header h3 {
+    margin-top: 25px; } }
 
 #tattoo_works {
   padding-top: 120px; }
 
-section {
-  width: 100%; }
-  section .artworks {
-    height: auto; }
+section .artworks {
+  height: auto; }
 
 .artworks {
   display: inline-block;
   width: 100%;
   position: relative;
   margin: 2%;
-  float: left; }
+  float: left;
+  overflow: hidden;
+  transition: .3s; }
   .artworks img {
     width: 100%;
     height: 320px; }
+  .artworks figure {
+    width: 100%;
+    margin: 0; }
   .artworks figcaption {
     width: 100%;
     display: absolute;
@@ -56,27 +75,45 @@ section {
     font-size: 12px;
     bottom: -50px;
     z-index: 2; }
+  .artworks figcaption {
+    transition: .3s; }
 
-@media only screen and (min-width: 480px) {
+.artworks:hover {
+  transition: .3s; }
+  .artworks:hover figcaption {
+    transform: scaleY(0); }
+  .artworks:hover img {
+    box-shadow: 4px 2px 7px #3cccf2; }
+
+@media only screen and (min-width: 0px) {
+  .artworks img {
+    height: auto; } }
+
+@media only screen and (min-width: 440px) {
   .artworks {
     float: left;
     width: 45.61403508772%;
     height: 320px;
-    margin: 0 2%; } }
+    margin: 0 2%; }
+    .artworks img {
+      height: 320px; }
+  #firebreather {
+    width: 95.15%; } }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 670px) {
   .artworks {
-    float: left;
     width: 31.228070175439%;
     margin: 0 1%; }
-  .cutout img {
-    width: 100%; }
   #firebreather {
-    width: 64.044140350878%; } }
+    width: 64.344140350878%; } }
 
-@media only screen and (min-width: 1328px) {
+@media only screen and (min-width: 850px) {
   .artworks {
-    float: left;
-    width: 23.414711477489%; }
+    width: 23.414711477489%;
+    margin: 0 .75%; }
   #firebreather {
-    width: 23.414711477489%; } }
+    width: 73.125%; } }
+
+@media only screen and (min-width: 960px) {
+  #firebreather {
+    width: 48.125%; } }
