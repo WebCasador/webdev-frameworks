@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Redesign for Seed</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="assets/js/jquery-2.1.3.js"></script>
+	
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<a href="#" class="navbar-brand">SEED</a>
+
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<div class="collapse navbar-collapse navHeaderCollapse">
+				<ul class="nav navbar-nav navbar-right text-center">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Lunch</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Dinner</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Drink</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Contact</a></li>	
+				</ul>
+			</div>
+		</div>
+	</nav> <!-- END NAV -->
+	
+
+
+
+	<div id="seedCarousel" class="carousel slide">
+		<ul class="carousel-indicators">
+			<li data-target="#seedCarousel" data-slide-to = "0" class="active"></li>
+			<li data-target="#seedCarousel" data-slide-to = "1"></li>
+			<li data-target="#seedCarousel" data-slide-to = "2"></li>
+			<li data-target="#seedCarousel" data-slide-to = "3"></li>
+		</ul>
+
+		<div class="carousel-inner">
+			<div class="overlay">
+				<img src="assets/img/seedLOGO.png" alt="logo" class=" image-responsive center-block">
+				
+			</div>
+			<div class="item active">
+				<img src="assets/img/background1.jpg" alt="restaurant" class="img-responsive">
+			</div>
+			<div class="item">
+				<img src="assets/img/background5.jpg" alt="restaurant" class="img-responsive">
+			</div>
+			<div class="item">
+				<img src="assets/img/background4.jpg" alt="restaurant" class="img-responsive">
+			</div>
+			<div class="item">
+				<img src="assets/img/background0.jpg" alt="restaurant" class="img-responsive">
+			</div>
+			<a class="carousel-control left" href="#seedCarousel" data-slide="prev"></a>
+			<span class="icon-prev"></span>
+
+			<a class="carousel-control right" href="#seedCarousel" data-slide="next"></a>
+			<span class="icon-next"></span>
+		</div>
+
+		
+		
+	</div> <!-- END CAROUSEL -->
+
+	<div class="container"> 
+		<h2 class="text-center">MENU</h2>
+		<div class="row menu">
+			
+			<div class="col-lg-4">
+				<h3 class="text-center"><a href="#">Lunch</a></h3>
+				<img src="assets/img/menus-lunch.jpg" alt="salad" class="image-responsive center-block img-rounded">
+				<a href="#" class="btn btn-default btn-lg">see more</a>
+			</div>
+			<div class="col-lg-4">
+				<h3 class="text-center"><a href="#">Dinner</a></h3>
+				<img src="assets/img/menus-dinner.jpg" alt="steak dinner" class="image-responsive center-block img-rounded">
+				<a href="#" class="btn btn-default btn-lg">see more</a>
+			</div>
+			<div class="col-lg-4">
+				<h3 class="text-center"><a href="#">Drinks</a></h3>
+				<img src="assets/img/menus-drinks.jpg" alt="cocktail" class="image-responsive center-block img-rounded">
+				<a href="#" class="btn btn-default btn-lg">see more</a>
+			</div>
+			
+		</div>
+	</div>
+	
+	<h2>bold flavors</h2>
+	<h3>locally sourced</h3>
+	<h4>quality</h4>
+	<h5>modern american cuisine</h5>
+
+
+	<script type="text/javascript" src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+	
+</body>
+</html>

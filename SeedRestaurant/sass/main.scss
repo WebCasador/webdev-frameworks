@@ -1,0 +1,20 @@
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "bower_components/bootstrap-sass-official/assets/javascripts/bootstrap";
+
+@import "_variables";
+
+
+body {
+	background-color: #000;
+}
+nav{
+
+	.navbar-default{background-color: red;}
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+}
