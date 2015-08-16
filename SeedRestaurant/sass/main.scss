@@ -1,20 +1,100 @@
 @import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
-@import "bower_components/bootstrap-sass-official/assets/javascripts/bootstrap";
-
 @import "_variables";
 
 
 body {
-	background-color: #000;
+	color: #000;
+	background-color: antiquewhite;
+	font-size: 16px;
 }
-nav{
 
-	.navbar-default{background-color: red;}
+.navbar-inverse{
+	background-color: #330000;
+	.navbar-brand {
+		background-image: url(../assets/img/header_logo.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin: 10px;
+		width: 50px;
+	}
+}
+
+.navbar-inverse .navbar-nav{
+	li a{
+		color: antiquewhite;
+	}
 }
 .overlay {
 	position: absolute;
-	top: 0;
+	top: 25%;
 	left: 0;
 	right: 0;
 	z-index: 10;
 }
+
+.carousel-inner{
+	.item{
+		img{
+			width: 100%;
+		}
+	}
+}
+
+.container {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+#about {
+	color: #fff;
+	h2{color: antiquewhite;}
+	.jumbotron {
+		background-color: #330000;
+		margin-bottom: 0;
+	}
+	.jumbotron p{
+		font-size: 25px;
+		margin: 20px 0;
+		padding: 10px 30px;
+	}
+	.jumbotron img{
+		margin-top: 20px;
+	}
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: darkorange;
+    background-image: none;
+}
+
+#menu {
+	background-color: #fff;
+	padding: 20px 0;
+	li {list-style: none;}
+	h1 {
+		margin: 60px 0;
+		background-color: #fff;
+	}
+	p {
+		padding: 0 40px;
+	}
+}
+
+#contact {
+	background-color: #ff3222;
+	padding: 25px 30px;
+	.col-sm-6 {
+
+	}
+	h4 {color: #fff;}
+	p {color: antiquewhite}
+	a {color: #330000;}
+}
+
+#footer {
+	background-color: #330000;
+	min-height: 100px;
+	color: #fff;
+	text-align: center;
+}
+

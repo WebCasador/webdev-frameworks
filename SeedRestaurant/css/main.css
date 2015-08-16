@@ -6058,3 +6058,79 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+body {
+  color: #000;
+  background-color: antiquewhite;
+  font-size: 16px; }
+
+.navbar-inverse {
+  background-color: #330000; }
+  .navbar-inverse .navbar-brand {
+    background-image: url(../assets/img/header_logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10px;
+    width: 50px; }
+
+.navbar-inverse .navbar-nav li a {
+  color: antiquewhite; }
+
+.overlay {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+  z-index: 10; }
+
+.carousel-inner .item img {
+  width: 100%; }
+
+.container {
+  padding-right: 0;
+  padding-left: 0; }
+
+#about {
+  color: #fff; }
+  #about h2 {
+    color: antiquewhite; }
+  #about .jumbotron {
+    background-color: #330000;
+    margin-bottom: 0; }
+  #about .jumbotron p {
+    font-size: 25px;
+    margin: 20px 0;
+    padding: 10px 30px; }
+  #about .jumbotron img {
+    margin-top: 20px; }
+
+.dropdown-menu > li > a:hover {
+  background-color: darkorange;
+  background-image: none; }
+
+#menu {
+  background-color: #fff;
+  padding: 20px 0; }
+  #menu li {
+    list-style: none; }
+  #menu h1 {
+    margin: 60px 0;
+    background-color: #fff; }
+  #menu p {
+    padding: 0 40px; }
+
+#contact {
+  background-color: #ff3222;
+  padding: 25px 30px; }
+  #contact h4 {
+    color: #fff; }
+  #contact p {
+    color: antiquewhite; }
+  #contact a {
+    color: #330000; }
+
+#footer {
+  background-color: #330000;
+  min-height: 100px;
+  color: #fff;
+  text-align: center; }
