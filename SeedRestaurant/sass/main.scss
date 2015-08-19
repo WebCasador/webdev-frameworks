@@ -1,55 +1,101 @@
 @import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import "_variables";
-
-
+// 1>  font imports on variable.scss not working
+// 2>  css transform for hamburger icon-bar spans not working
+// 		& for hamburger and navbar bottom >> style border-color:none 
+// 		not overriding boostrap's defaults
+// 3>  js scrollTo conflicting with Boostrap's carousel scroll:
+// 		one works, but not the other.
 body {
-	color: #000;
-	background-color: antiquewhite;
+	color: $black;
+	background-color: $antiquewhite;
 	font-size: 16px;
 }
+.container {
+	padding-right: 0;
+	padding-left: 0;
+}
+h1, h2 {font-family: $mainfont;}
+h3, h4, h5 {font-family: $secondaryfont;}
+a {font-family: $linkfont};
 
+
+// ***********************************************
 .navbar-inverse{
-	background-color: #330000;
+	background-color: $primarycolor;
+	border-color: none;
+	.navbar-toggle {
+		margin-top: 20px;
+		border-color: none;
+		.icon-bar{
+			border-color: none;
+			background-color: $antiquewhite;
+			transition: all 0.2s;
+		}
+		.top-bar {
+			-webkit-transform: rotate(45deg);
+		    -webkit-transform-origin: 10% 10%;
+		    transform: rotate(45deg);
+		    transform-origin: 10% 10%;
+		  }
+		.middle-bar { opacity: 0;}
+		.bottom-bar {
+			-webkit-transform: rotate(-45deg);
+		    -webkit-transform-origin: 10% 90%;
+		    transform: rotate(-45deg);
+		    transform-origin: 10% 90%;
+		}
+	}
 	.navbar-brand {
-		background-image: url(../assets/img/header_logo.png);
+		background-image: $logo;
 		background-size: cover;
 		background-repeat: no-repeat;
 		margin: 10px;
 		width: 50px;
 	}
-}
-
-.navbar-inverse .navbar-nav{
-	li a{
-		color: antiquewhite;
+	.navbar-nav{
+		margin-top: 10px;
+		li a{
+			color: $antiquewhite;
+		}
 	}
 }
+
+.navbar-toggle.collapse {
+	.top-bar{
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	.middle-bar { opacity: 1;}
+	.bottom-bar {
+	    -webkit-transform: rotate(0);
+	    transform: rotate(0);
+	}
+}
+// *******************************************
+
 .overlay {
 	position: absolute;
-	top: 25%;
+	top: 35%;
 	left: 0;
 	right: 0;
 	z-index: 10;
 }
 
 .carousel-inner{
-	.item{
-		img{
-			width: 100%;
-		}
+	.item img {
+		width: 100%;
+		-webkit-filter: blur(10px);
+		filter: blur(10px);
+		height: 950px;	
 	}
 }
 
-.container {
-	padding-right: 0;
-	padding-left: 0;
-}
-
 #about {
-	color: #fff;
-	h2{color: antiquewhite;}
+	color: $white;
+	h2 { color: $antiquewhite;}
 	.jumbotron {
-		background-color: #330000;
+		background-color: $primarycolor;
 		margin-bottom: 0;
 	}
 	.jumbotron p{
@@ -57,44 +103,45 @@ body {
 		margin: 20px 0;
 		padding: 10px 30px;
 	}
-	.jumbotron img{
-		margin-top: 20px;
-	}
-}
-
-.dropdown-menu > li > a:hover {
-    background-color: darkorange;
-    background-image: none;
+	.jumbotron img { margin-top: 20px;}
 }
 
 #menu {
-	background-color: #fff;
+	background-color: $white;
 	padding: 20px 0;
 	li {list-style: none;}
 	h1 {
 		margin: 60px 0;
-		background-color: #fff;
+		background-color: $white;
 	}
-	p {
-		padding: 0 40px;
-	}
+	p { padding: 0 40px;}
+}
+.dropdown-menu > li > a:hover {
+    background-color: $hovercolor;
+    background-image: none;
 }
 
 #contact {
-	background-color: #ff3222;
+	background-color: $accentcolor;
 	padding: 25px 30px;
-	.col-sm-6 {
-
+	h4 {color: $white;}
+	p {color: $antiquewhite;}
+	a {color: $primarycolor;}
+	.hours_of_op {margin-bottom: 25px;}
+	.openTable {
+	background-color: white;
+	padding: 10px;
 	}
-	h4 {color: #fff;}
-	p {color: antiquewhite}
-	a {color: #330000;}
+		
+}
+#contact .location a.open-table {
+	background-color: $white;
 }
 
 #footer {
-	background-color: #330000;
+	background-color: $primarycolor;
 	min-height: 100px;
-	color: #fff;
+	color: $white;
 	text-align: center;
+	padding-top: 10px;
 }
-

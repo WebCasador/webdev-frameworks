@@ -11,14 +11,15 @@
 	
 </head>
 <body>
+	<div id="toTop"></div>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<a href="#seedCarousel" class="navbar-brand"></a>
 
-			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navHeaderCollapse">
+				<span class="icon-bar top-bar"></span>
+				<span class="icon-bar middle-bar"></span>
+				<span class="icon-bar bottom-bar"></span>
 			</button>
 			<div class="collapse navbar-collapse navHeaderCollapse">
 				<ul class="nav navbar-nav navbar-right text-center">
@@ -41,20 +42,20 @@
 
 		<div class="carousel-inner">
 			<div class="overlay center-block">
-				<img src="assets/img/seedLOGO.png" alt="logo" class=" image-responsive center-block">	
+				<img src="assets/img/seedLOGO.png" alt="logo" id="logo" class=" image-responsive center-block">	
 			</div>
 
 			<div class="item active">
-				<img src="assets/img/background1.jpg" alt="restaurant" class="img-responsive">
+				<img src="assets/img/Seed-bar-area.jpg" alt="restaurant" class="img-responsive">
+			</div>
+			<div class="item">
+				<img src="assets/img/scallops.jpg" alt="restaurant" class="img-responsive">
+			</div>
+			<div class="item">
+				<img src="assets/img/Seed6.jpg" alt="restaurant" class="img-responsive">
 			</div>
 			<div class="item">
 				<img src="assets/img/background5.jpg" alt="restaurant" class="img-responsive">
-			</div>
-			<div class="item">
-				<img src="assets/img/background4.jpg" alt="restaurant" class="img-responsive">
-			</div>
-			<div class="item">
-				<img src="assets/img/background0.jpg" alt="restaurant" class="img-responsive">
 			</div>
 			<a class="carousel-control left" href="#seedCarousel" data-slide="prev"></a>
 			<span class="icon-prev"></span>
@@ -122,45 +123,48 @@
 	<div id="contact" class="container">
 		<h1 class="text-center">Contact</h1>
 		<div class="row medal">
-			<div class="col-sm-6">
+			<div class="col-sm-6 location">
 				<div>
 					<h4>SEED KITCHEN & BAR</h4>
 					<p>1311 Johnson Ferry Road, Suite 504 <br>Marietta, Georgia 30068 <br> Phone: 678.214.6888 | Fax: 678.214.6885</p>
-					<a href="" class="">eNewsletter Signup</a>
+					<a href="#contact" class="">eNewsletter Signup</a>
 				</div>
-				<div>
+				<div class="hours_of_op">
 					<h4>HOURS OF OPERATION</h4>
 					<p>Lunch (Mon – Sat): 11:30am – 3:00pm<br>Brunch (Sunday): 10:00am – 3:00pm<br>Dinner (Sun – Thurs): 3:00pm – 10:00pm<br>Dinner (Fri – Sat): 3:00pm – 11:00pm</p>
 				</div>
-				<div>
-					<h4>WORK FOR US</h4>
-					<p>Please send your resume to <a href="">jobs@eatatseed.com</a></p>
-				</div>
+				
+				<a href="http://www.opentable.com/seed-kitchen-and-bar-reservations-marietta?restref=66145"><img src="assets/img/open_table_logo.png" alt="open table button" class="openTable"></a>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-6 staff">
 				<div>
 					<h4>GENERAL MANAGER/SOMMELIER</h4>
-					<p>Jason Raymond: <a href="">jraymond@eatatseed.com</a></p>
+					<p>Jason Raymond: <a href="#contact">jraymond@eatatseed.com</a></p>
 				</div>
 				<div>
 					<h4>EXECUTIVE CHEF & OWNER</h4>
-					<p>Doug Turbush: <a href="">chef@eatatseed.com</a></p>
+					<p>Doug Turbush: <a href="#contact">chef@eatatseed.com</a></p>
 				</div>
 				<div>
 					<h4>MIXOLOGIST</h4>
-					<p>Chris McNeill: <a href="">cmcneill@eatatseed.com</a></p>
+					<p>Chris McNeill: <a href="#contact">cmcneill@eatatseed.com</a></p>
 				</div>
 				<div>
 					<h4>MEDIA INQUIRIES</h4>
-					<p>Melissa Libby: <a href="">melissa@melissalibbypr.com</a></p>
+					<p>Melissa Libby: <a href="#contact">melissa@melissalibbypr.com</a></p>
 				</div>
+				<div>
+					<h4>WORK FOR US</h4>
+					<p>Please send your resume to <a href="#contact">jobs@eatatseed.com</a></p>
+				</div>
+
 			</div>
 		</div>
 	</div><!-- END CONTACT -->
 
 	<div id="footer">
 		<div class="container">
-			<footer>&copy;webcasador<br><a href="#seedCarousel">Back to top</a></footer>
+			<footer>&copy;webcasador<br><a href="#toTop">Back to top</a></footer>
 		</div>	
 	</div>
 

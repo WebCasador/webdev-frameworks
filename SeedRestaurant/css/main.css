@@ -6061,39 +6061,57 @@ button.close {
 
 body {
   color: #000;
-  background-color: antiquewhite;
+  background-color: #FAEBD7;
   font-size: 16px; }
+
+.container {
+  padding-right: 0;
+  padding-left: 0; }
+
+h1, h2 {
+  font-family: "Felipa", serif; }
+
+h3, h4, h5 {
+  font-family: "Julee", serif; }
+
+a {
+  font-family: "Merienda One", serif; }
 
 .navbar-inverse {
   background-color: #330000; }
+  .navbar-inverse .navbar-toggle {
+    margin-top: 20px;
+    border-color: #FAEBD7; }
+    .navbar-inverse .navbar-toggle .icon-bar {
+      background-color: #FAEBD7; }
   .navbar-inverse .navbar-brand {
     background-image: url(../assets/img/header_logo.png);
     background-size: cover;
     background-repeat: no-repeat;
     margin: 10px;
     width: 50px; }
-
-.navbar-inverse .navbar-nav li a {
-  color: antiquewhite; }
+  .navbar-inverse .navbar-nav {
+    margin-top: 10px; }
+    .navbar-inverse .navbar-nav li a {
+      color: #FAEBD7; }
 
 .overlay {
   position: absolute;
-  top: 25%;
+  top: 35%;
   left: 0;
   right: 0;
   z-index: 10; }
 
 .carousel-inner .item img {
-  width: 100%; }
-
-.container {
-  padding-right: 0;
-  padding-left: 0; }
+  width: 100%;
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+  height: 950px; }
 
 #about {
   color: #fff; }
   #about h2 {
-    color: antiquewhite; }
+    color: #FAEBD7; }
   #about .jumbotron {
     background-color: #330000;
     margin-bottom: 0; }
@@ -6103,10 +6121,6 @@ body {
     padding: 10px 30px; }
   #about .jumbotron img {
     margin-top: 20px; }
-
-.dropdown-menu > li > a:hover {
-  background-color: darkorange;
-  background-image: none; }
 
 #menu {
   background-color: #fff;
@@ -6119,13 +6133,17 @@ body {
   #menu p {
     padding: 0 40px; }
 
+.dropdown-menu > li > a:hover {
+  background-color: #FF8C00;
+  background-image: none; }
+
 #contact {
   background-color: #ff3222;
   padding: 25px 30px; }
   #contact h4 {
     color: #fff; }
   #contact p {
-    color: antiquewhite; }
+    color: #FAEBD7; }
   #contact a {
     color: #330000; }
 
