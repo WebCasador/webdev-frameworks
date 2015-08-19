@@ -6,8 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="css/main.css">
-	<script type="text/javascript" src="assets/js/jquery-2.1.3.js"></script>
-	<script type="text/javascript" src="assets/js/main.js"></script>
+	
 	
 </head>
 <body>
@@ -16,7 +15,7 @@
 		<div class="container">
 			<a href="#seedCarousel" class="navbar-brand"></a>
 
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navHeaderCollapse">
+			<button type="button" class="navbar-toggle collapsed active" data-toggle="collapse" data-target=".navHeaderCollapse">
 				<span class="icon-bar top-bar"></span>
 				<span class="icon-bar middle-bar"></span>
 				<span class="icon-bar bottom-bar"></span>
@@ -32,7 +31,7 @@
 		</div>
 	</nav> <!-- END NAV -->
 	
-	<div id="seedCarousel" class="carousel slide">
+	<div id="seedCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
 		<ul class="carousel-indicators">
 			<li data-target="#seedCarousel" data-slide-to = "0" class="active"></li>
 			<li data-target="#seedCarousel" data-slide-to = "1"></li>
@@ -57,11 +56,11 @@
 			<div class="item">
 				<img src="assets/img/background5.jpg" alt="restaurant" class="img-responsive">
 			</div>
-			<a class="carousel-control left" href="#seedCarousel" data-slide="prev"></a>
-			<span class="icon-prev"></span>
+			<a class="carousel-control left" href="#seedCarousel" data-slide="prev"><span class="icon-prev"></span></a>
+			
 
-			<a class="carousel-control right" href="#seedCarousel" data-slide="next"></a>
-			<span class="icon-next"></span>
+			<a class="carousel-control right" href="#seedCarousel" data-slide="next"><span class="icon-next"></span></a>
+			
 		</div>
 	</div> <!-- END CAROUSEL -->
 
@@ -167,8 +166,9 @@
 			<footer>&copy;webcasador<br><a href="#toTop">Back to top</a></footer>
 		</div>	
 	</div>
-
+	<script type="text/javascript" src="assets/js/jquery-2.1.3.js"></script>
 	<script type="text/javascript" src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
 	
 </body>
 </html>

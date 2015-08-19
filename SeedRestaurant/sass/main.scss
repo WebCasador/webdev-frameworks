@@ -1,11 +1,6 @@
 @import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import "_variables";
-// 1>  font imports on variable.scss not working
-// 2>  css transform for hamburger icon-bar spans not working
-// 		& for hamburger and navbar bottom >> style border-color:none 
-// 		not overriding boostrap's defaults
-// 3>  js scrollTo conflicting with Boostrap's carousel scroll:
-// 		one works, but not the other.
+
 body {
 	color: $black;
 	background-color: $antiquewhite;
@@ -15,6 +10,7 @@ body {
 	padding-right: 0;
 	padding-left: 0;
 }
+
 h1, h2 {font-family: $mainfont;}
 h3, h4, h5 {font-family: $secondaryfont;}
 a {font-family: $linkfont};
@@ -23,12 +19,12 @@ a {font-family: $linkfont};
 // ***********************************************
 .navbar-inverse{
 	background-color: $primarycolor;
-	border-color: none;
 	.navbar-toggle {
 		margin-top: 20px;
-		border-color: none;
+		border: none;
+		background-color: none;
+
 		.icon-bar{
-			border-color: none;
 			background-color: $antiquewhite;
 			transition: all 0.2s;
 		}
@@ -46,6 +42,20 @@ a {font-family: $linkfont};
 		    transform-origin: 10% 90%;
 		}
 	}
+	.navbar-toggle.active{
+		margin-top: 20px;
+		border: none;
+		background-color: none;
+		.top-bar{
+			-webkit-transform: rotate(0);
+			transform: rotate(0);
+		}
+		.middle-bar { opacity: 1;}
+		.bottom-bar {
+		    -webkit-transform: rotate(0);
+		    transform: rotate(0);
+		}
+	}
 	.navbar-brand {
 		background-image: $logo;
 		background-size: cover;
@@ -60,18 +70,8 @@ a {font-family: $linkfont};
 		}
 	}
 }
-
-.navbar-toggle.collapse {
-	.top-bar{
-		-webkit-transform: rotate(0);
-		transform: rotate(0);
-	}
-	.middle-bar { opacity: 1;}
-	.bottom-bar {
-	    -webkit-transform: rotate(0);
-	    transform: rotate(0);
-	}
-}
+// .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+//     background-color: none;
 // *******************************************
 
 .overlay {
@@ -119,6 +119,7 @@ a {font-family: $linkfont};
 .dropdown-menu > li > a:hover {
     background-color: $hovercolor;
     background-image: none;
+    font-family: $altfont1;
 }
 
 #contact {
@@ -130,12 +131,10 @@ a {font-family: $linkfont};
 	.hours_of_op {margin-bottom: 25px;}
 	.openTable {
 	background-color: white;
-	padding: 10px;
-	}
-		
-}
-#contact .location a.open-table {
-	background-color: $white;
+	padding: 5px;
+	border-radius: 5px;
+	margin-bottom: 18px;
+	}		
 }
 
 #footer {

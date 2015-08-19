@@ -6069,21 +6069,47 @@ body {
   padding-left: 0; }
 
 h1, h2 {
-  font-family: "Felipa", serif; }
+  font-family: "Felipa", cursive; }
 
 h3, h4, h5 {
-  font-family: "Julee", serif; }
+  font-family: "Montserrat", san-serif; }
 
 a {
-  font-family: "Merienda One", serif; }
+  font-family: "Karla", serif; }
 
 .navbar-inverse {
   background-color: #330000; }
   .navbar-inverse .navbar-toggle {
     margin-top: 20px;
-    border-color: #FAEBD7; }
+    border: none;
+    background-color: none; }
     .navbar-inverse .navbar-toggle .icon-bar {
-      background-color: #FAEBD7; }
+      background-color: #FAEBD7;
+      transition: all 0.2s; }
+    .navbar-inverse .navbar-toggle .top-bar {
+      -webkit-transform: rotate(45deg);
+      -webkit-transform-origin: 10% 10%;
+      transform: rotate(45deg);
+      transform-origin: 10% 10%; }
+    .navbar-inverse .navbar-toggle .middle-bar {
+      opacity: 0; }
+    .navbar-inverse .navbar-toggle .bottom-bar {
+      -webkit-transform: rotate(-45deg);
+      -webkit-transform-origin: 10% 90%;
+      transform: rotate(-45deg);
+      transform-origin: 10% 90%; }
+  .navbar-inverse .navbar-toggle.active {
+    margin-top: 20px;
+    border: none;
+    background-color: none; }
+    .navbar-inverse .navbar-toggle.active .top-bar {
+      -webkit-transform: rotate(0);
+      transform: rotate(0); }
+    .navbar-inverse .navbar-toggle.active .middle-bar {
+      opacity: 1; }
+    .navbar-inverse .navbar-toggle.active .bottom-bar {
+      -webkit-transform: rotate(0);
+      transform: rotate(0); }
   .navbar-inverse .navbar-brand {
     background-image: url(../assets/img/header_logo.png);
     background-size: cover;
@@ -6135,7 +6161,8 @@ a {
 
 .dropdown-menu > li > a:hover {
   background-color: #FF8C00;
-  background-image: none; }
+  background-image: none;
+  font-family: "Karla", cursive; }
 
 #contact {
   background-color: #ff3222;
@@ -6146,9 +6173,17 @@ a {
     color: #FAEBD7; }
   #contact a {
     color: #330000; }
+  #contact .hours_of_op {
+    margin-bottom: 25px; }
+  #contact .openTable {
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 18px; }
 
 #footer {
   background-color: #330000;
   min-height: 100px;
   color: #fff;
-  text-align: center; }
+  text-align: center;
+  padding-top: 10px; }
